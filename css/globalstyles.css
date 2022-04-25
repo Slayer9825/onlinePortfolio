@@ -2,12 +2,20 @@
 
 
 body {
-    background-color: #33373b; /* #131415 */
+    background-color: #3b3335; /* #131415 */
     margin: 0px;
     padding: 0px;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 1.1em;
+    color: rgb(238, 238, 238);
+    /*background-image: url("../images/somepicture.png");*/
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+
+main a {
     color: rgb(238, 238, 238);
 }
 
@@ -15,8 +23,9 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    min-width: 370px;
+    min-width: 335px;
     z-index: 1;
+    
 }
 
 nav {
@@ -24,6 +33,7 @@ nav {
     height: 63px;
     display: flex;
     justify-content: center;
+    
 }
 
 nav span {
@@ -44,7 +54,6 @@ table td {
     border-bottom: 5px solid rgb(0, 0, 0); 
     height: 54px;
     width: 120px;
-    color: rgb(255, 255, 255);
     text-align: center;
     font-size: 1.3em;
     font-weight: bold;
@@ -67,7 +76,7 @@ table td {
 
 a.navlinks {
     position: relative;
-    color: #bbbbbb;
+    color: #dcdcdc;
     text-decoration: none;
     padding: 5px;
 }
@@ -86,18 +95,19 @@ a.navlinks::before {
 }
 
 a.navlinks:hover {
-    color: #efefef;
+    color: #cdfd93;
 }
 
 a.navlinks:hover::before {
     transform: scaleX(1);
 }
 
-
-
 .darkModeSwap {
     color: black;
-    background-color: white;
+    background-color: #b8aaaa;
+    background-image: none;
+
+
 }
 
 #darkModeButtonToggle {
@@ -115,7 +125,10 @@ a.navlinks:hover::before {
 }
 
 #contactMe {
-    min-width: 400px;
+    min-width: 325px;
+    padding-right: 60px;
+    height: 250px;
+    margin-top: 45px;
 }
 
 #contactList li {
@@ -123,14 +136,23 @@ a.navlinks:hover::before {
     list-style: none;
     text-align: left;
     font-size: 0.92em;
-    padding: 0px 0px 5px 30px;
-    margin: -6px 0px 0px 75px;
+    padding: 5px 0px 5px 30px;
+    margin: -5px 0px 0px 75px;
 }
 
-#contactList a:visited {
-    color: #ffffff;
+.projectListItem {
+    list-style: none;
+    text-align: center;
 }
 
+.contentContainerProject { 
+    text-align: center;
+}
 
+.contactLinks {
+    color: #000000;
+}
 
-
+.linkColorSwap {
+    color: #000000; 
+}

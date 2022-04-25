@@ -7,24 +7,86 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="globalstyles.css">
-	<script src="script.js" defer></script>
-	
+    <link rel="stylesheet" type="text/css" href="css/globalstyles.css">	
+	<script src="script/script.js" defer></script>
 	<style>
-		#navBarFirstItem { 
-			border-bottom: 5px solid rgb(255, 255, 255); 
-		}
+        #gridTitleItem {
+            grid-row: 1;
+            grid-column: 1 / 7;
+        }
 
-	</style>
+
+        #firstGridItem {
+            grid-row: 2 / 4;
+            grid-column: 1 / 7;
+            border: 2px solid black;
+            padding: 10px;
+			min-width: 320px;
+
+        }
+
+        #secondGridItem {
+            grid-row: 4 / 10;
+            grid-column: 1 / 4;
+            border: 2px solid black;
+			display: flex;
+			justify-content: center;
+			min-width: 320px;
+        }
+
+
+		#thirdGridItem {
+            grid-row: 4 / 10;
+            grid-column: 4 / 7;
+			border: 2px solid black;
+			min-width: 320px;
+			display: flex;
+        }
+        #fourthGridItem {
+            grid-row: 10 / 16;
+            grid-column: 1 / 7;
+			border: 2px solid black;
+			min-width: 320px;
+        }
+
+        #navBarSecondItem { 
+        	border-bottom: 5px solid rgb(255, 255, 255); 
+        }
+
+        @media screen and (max-width: 600px) {
+            #gridWrapper {
+                min-width: 325px;
+                height: 1300px;
+            }
+            #firstGridItem {
+                grid-row: 2 / 4;
+                grid-column: 1 / 7;
+            }
+            #secondGridItem {
+                grid-row: 4 / 8;
+                grid-column: 1 / 7;
+            }
+			#thirdGridItem {
+            grid-row: 8 / 12;
+            grid-column: 1 / 7;
+			border: 2px solid black;
+        	}
+			#fourthGridItem {
+            grid-row: 12 / 15;
+            grid-column: 1 / 7;
+			border: 2px solid black;
+       		}
+        }
+    </style>
 	
 </head>
 <body>
 	<header>
 	    <nav>
 			<table>
-				<td id="navBarFirstItem"><a class="navlinks" href="#">Home</a></td>
-				<td id="navBarSecondItem"><a class="navlinks" href="#">Projects</a></td>
-				<td id="navBarThirdItem"><a class="navlinks" href="#">Contact</a></td>
+				<td id="navBarFirstItem"><a class="navlinks" href="index.html">Home</a></td>
+				<td id="navBarSecondItem"><a class="navlinks" href="projects.html">Projects</a></td>
+				<td id="navBarThirdItem"><a class="navlinks" href="contact.html">Contact</a></td>
 				<td id="navBarFourthItem"><a class="navlinks" href="#">CV</a></td>
 				
 			</table>
@@ -33,33 +95,28 @@
 	</header>
 	<main>
 		<div id="gridWrapper">
+            <div id="gridTitleItem"><h3 style="text-align: center;">Projects:</h3></div>
 			<div id="firstGridItem">
-				<h2>About Me:</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan felis sit amet nunc malesuada, semper commodo massa sollicitudin.
-					Maecenas eu leo felis. Quisque eu libero elit. Duis a arcu id libero commodo mollis sit amet ut tortor. 
-					Morbi nec auctor ligula. Quisque in condimentum velit. Ut ultrices orci mattis, tincidunt risus ac, cursus ante. 
-					Praesent id placerat purus, eget rutrum enim.
-				</p>
+                <p>Below you will be able to find the different personal projects I have worked on. Please note that not all of these projects have github repo's associated with them.</p>
 			</div>
 			<div id="secondGridItem">
-				<div id="selfImageContainer">
-					<img src="placeholder.png">
+				<div class="contentContainerProject">
+						<h4>Loan Payment Calculator</h4>
+						<a href="LoanDebtCalculator/index.html">
+								<img src="../images/LoanDebtCalculator.png" width="290px" height="190px">
+						</a> <!--width="290" height="190"-->
+						<p>A loan payment calculator in Javascript that calculates input from the user and returns payment amount per month.</p>
 				</div>
 			</div>
 			<div id="thirdGridItem">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan felis sit amet nunc malesuada, semper commodo massa sollicitudin.
-					Maecenas eu leo felis. Quisque eu libero elit. Duis a arcu id libero commodo mollis sit amet ut tortor. 
-					Morbi nec auctor ligula. Quisque in condimentum velit. Ut ultrices orci mattis, tincidunt risus ac, cursus ante. 
-					Praesent id placerat purus, eget rutrum enim. Phasellus lobortis justo eu sodales volutpat. Morbi pharetra gravida neque nec sagittis. 
-					Etiam nec justo velit. Nulla eget lectus et nisl feugiat iaculis. Fusce mattis in ex at fermentum. Phasellus non scelerisque purus. 
-					Nunc finibus mattis sapien.
-				</p>
+				<div class="contentContainerProject">
+					<h4>Advice Generator</h4>
+					<a href="LoanDebtCalculator/index.html"><img src="../images/LoanDebtCalculator.png" width="280px" height="190px"></a>
+					<p>An advice generator that generates a sentence in Javascript by using three arrays for adjectives, verbs and adverbs.</p>
+				</div>
 			</div>
 			<div id="fourthGridItem">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan felis sit amet nunc malesuada, semper commodo massa sollicitudin.
-					Maecenas eu leo felis. Quisque eu libero elit. Duis a arcu id libero commodo mollis sit amet ut tortor. 
-					Morbi nec auctor ligula. Quisque in condimentum velit. Ut ultrices orci mattis, tincidunt risus ac, cursus ante. 
-				</p>
+				
 			</div>
 		</div>
 

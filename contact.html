@@ -8,18 +8,24 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/globalstyles.css">	
-	<script src="script.js" defer></script>
+	<script src="script/script.js" defer></script>
 	
 	<style>
+        #gridTitleItem {
+            grid-row: 1;
+            grid-column: 1 / 7;
+        }
+
         #firstGridItem {
-            grid-row: 2 / 5;
+            grid-row: 2 / 6;
             grid-column: 1 / 4;
             border: 2px solid black;
             padding: 10px;
+
         }
 
         #secondGridItem {
-            grid-row: 2 / 5;
+            grid-row: 2 / 6;
             grid-column: 4 / 7;
             border: 2px solid black;
             display: flex;
@@ -34,20 +40,23 @@
 
         @media screen and (max-width: 600px) {
             #gridWrapper {
-                min-width: 370px;
+                min-width: 325px;
                 height: 1300px;
             }
             #firstGridItem {
-                grid-row: 2 / 4;
+                grid-row: 2 / 5;
                 grid-column: 1 / 7;
             }
             #secondGridItem {
-                grid-row: 4 / 6;
+                grid-row: 5 / 6;
                 grid-column: 1 / 7;
             }
             #secondGridItem img {
                 max-width: 62%;
                 min-width: 35%;
+            }
+            #contactList li {
+                margin: 0px 0px 0px 73px;
             }
         }
     </style>
@@ -57,9 +66,9 @@
 	<header>
 	    <nav>
 			<table>
-				<td id="navBarFirstItem"><a class="navlinks" href="#">Home</a></td>
-				<td id="navBarSecondItem"><a class="navlinks" href="#">Projects</a></td>
-				<td id="navBarThirdItem"><a class="navlinks" href="#">Contact</a></td>
+				<td id="navBarFirstItem"><a class="navlinks" href="index.html">Home</a></td>
+				<td id="navBarSecondItem"><a class="navlinks" href="projects.html">Projects</a></td>
+				<td id="navBarThirdItem"><a class="navlinks" href="contact.html">Contact</a></td>
 				<td id="navBarFourthItem"><a class="navlinks" href="#">CV</a></td>
 				
 			</table>
@@ -68,20 +77,19 @@
 	</header>
 	<main>
 		<div id="gridWrapper">
+            <div id="gridTitleItem"><h3 style="text-align: center;">Contact Me:</h3></div>
 			<div id="firstGridItem">
-				<h3 style="text-align: center;">Contact Me:</h3>
                 <p>Have any questions or would like to get in touch? Here you can find a list of all my contact information.</p>
-                <p>I will usually respond to any messages or emails within 24 hours. But if you want to reach me quickly, then email is the fastest option as I check these frequently.</p>
+                <p>I will usually respond to any messages or emails within 24 hours. However, if you wish to reach me quickly, then email is the fastest option as I check these frequently.</p>
 			</div>
 			<div id="secondGridItem">
+                <!--<h3 style="text-align: center; margin-top: -2px;">Details:</h3>-->
                 <div id="contactMe">
-                    <h3 style="text-align: center; margin-top: -2px;">Details:</h3>
                     <list id="contactList">
-                        <li style="background: url(phone-call.png) no-repeat left">: +(44) 07394 881673</li><br>
-                        <li style="background: url(letter.png) no-repeat left">: iamjanustheman@gmail.com</li><br>
-                        <li style="background: url(web.png) no-repeat left">: <a href="https://jan-arne.olafsen.co.uk/" class="contactLinks">jan-arne.olafsen.com</a></li><br>
-                        <li style="background: url(github.png) no-repeat left">: <a href="https://github.com/Slayer9825" class="contactLinks">github.com/Slayer9825</a></li><br>
-                        <li style="background: url(address.png) no-repeat left top 0px">: 17 Moore Street, Gateshead<br>&nbsp;&nbsp;NE8 3PN, United Kingdom</li>
+                        <li style="background: url(images/phone-call.png) no-repeat left">: +(44) 07394 881673</li><br>
+                        <li style="background: url(images/letter.png) no-repeat left">: iamjanustheman@gmail.com</li><br>
+                        <li class="listContactElement" style="background: url(images/linkedin.png) no-repeat left">: <a href="https://www.linkedin.com/in/jan-arne-olafsen-a27616161/" id="contactLinkName">linkedin/jan-arne-olafsen</a></li><br>
+                        <li class="listContactElement" style="background: url(images/github.png) no-repeat left">: <a href="https://github.com/Slayer9825" id="contactLinkName2">github.com/Slayer9825</a></li><br>
                     </list>
                 </div>
 			</div>
