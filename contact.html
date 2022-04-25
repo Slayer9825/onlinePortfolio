@@ -3,15 +3,89 @@
 <head>
 	<title>A Portfolio</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/globalstyles.css">	
+	<script src="script.js" defer></script>
+	
+	<style>
+        #firstGridItem {
+            grid-row: 2 / 5;
+            grid-column: 1 / 4;
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        #secondGridItem {
+            grid-row: 2 / 5;
+            grid-column: 4 / 7;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        #navBarThirdItem { 
+        	border-bottom: 5px solid rgb(255, 255, 255); 
+        }
+
+        @media screen and (max-width: 600px) {
+            #gridWrapper {
+                min-width: 370px;
+                height: 1300px;
+            }
+            #firstGridItem {
+                grid-row: 2 / 4;
+                grid-column: 1 / 7;
+            }
+            #secondGridItem {
+                grid-row: 4 / 6;
+                grid-column: 1 / 7;
+            }
+            #secondGridItem img {
+                max-width: 62%;
+                min-width: 35%;
+            }
+        }
+    </style>
 	
 </head>
-<body id="wrapper">
+<body>
 	<header>
 	    <nav>
+			<table>
+				<td id="navBarFirstItem"><a class="navlinks" href="#">Home</a></td>
+				<td id="navBarSecondItem"><a class="navlinks" href="#">Projects</a></td>
+				<td id="navBarThirdItem"><a class="navlinks" href="#">Contact</a></td>
+				<td id="navBarFourthItem"><a class="navlinks" href="#">CV</a></td>
+				
+			</table>
+			<span id="darkModeButtonToggle"></span>
 	    </nav>
 	</header>
-	
 	<main>
+		<div id="gridWrapper">
+			<div id="firstGridItem">
+				<h3 style="text-align: center;">Contact Me:</h3>
+                <p>Have any questions or would like to get in touch? Here you can find a list of all my contact information.</p>
+                <p>I will usually respond to any messages or emails within 24 hours. But if you want to reach me quickly, then email is the fastest option as I check these frequently.</p>
+			</div>
+			<div id="secondGridItem">
+                <div id="contactMe">
+                    <h3 style="text-align: center; margin-top: -2px;">Details:</h3>
+                    <list id="contactList">
+                        <li style="background: url(phone-call.png) no-repeat left">: +(44) 07394 881673</li><br>
+                        <li style="background: url(letter.png) no-repeat left">: iamjanustheman@gmail.com</li><br>
+                        <li style="background: url(web.png) no-repeat left">: <a href="https://jan-arne.olafsen.co.uk/" class="contactLinks">jan-arne.olafsen.com</a></li><br>
+                        <li style="background: url(github.png) no-repeat left">: <a href="https://github.com/Slayer9825" class="contactLinks">github.com/Slayer9825</a></li><br>
+                        <li style="background: url(address.png) no-repeat left top 0px">: 17 Moore Street, Gateshead<br>&nbsp;&nbsp;NE8 3PN, United Kingdom</li>
+                    </list>
+                </div>
+			</div>
+		</div>
 
 	</main>
 </body>
