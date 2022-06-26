@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Jan's Portfolio</title>
+	<meta charset="utf-8">
+	<script src="LoanDebtScript.js" defer></script>
+	<script src="script.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<!--<link rel="stylesheet" href="globalstyles.css">-->
+	<link rel="stylesheet" href="../../css/globalstyles.css">
+
+	<style>
+		#loanParameters {
+			margin-left: auto;
+			margin-right: auto;
+			width: max-content;
+		}
+
+		#mainDiv {
+			margin-left: auto;
+			margin-right: auto;
+			width: max-content;
+		}
+
+		table td {
+			border: none;
+			height: 25px;
+			width: 120px;
+			text-align: center;
+			font-size: 1em;
+			font-weight: normal;
+			margin: 0px;
+			padding: 0px;
+		} 
+		#loanPaymentTable tr:nth-child(even) {
+		background-color: #1b1e20;
+		}
+
+		#navBarSecondItem { 
+        	border-bottom: 5px solid rgb(255, 255, 255); 
+        }
+
+	</style>
+</head>
+
+<body style="background-image:url(../images/somepicture.png)" id="wrapper">
+	<header>
+	    <nav>
+			<table id="navTable">
+				<td id="navBarFirstItem"><a class="navlinks" href="../../index.html">Home</a></td>
+				<td id="navBarSecondItem"><a class="navlinks" href="../../projects.html">Projects</a></td>
+				<td id="navBarThirdItem"><a class="navlinks" href="../../contact.html">Contact</a></td>
+				<td id="navBarFourthItem"><a class="navlinks" href="#">CV</a></td>
+				
+			</table>
+			<span id="darkModeButtonToggle"></span>
+	    </nav>
+	</header>
+	
+	<main>
+		<div id="body1"></div>
+		<h2 style="text-align:center;">Loan Calculator</h2>
+		<h4 style="text-align:center;">Calculates loan payments based on amount, loan length and loan rate.</h4>
+			<div id="loanParameters">
+				<p>Loan amount:</p><input type="number" id="amountToLoan">
+				<p>Loan period (months)</p>
+				<input type="number" id="loanLength">
+				<p>Loan rate (annual)</p>
+				<input type="number" id="loanRate">
+				<br/><br/>
+				<button type="button" id="getLoanParameters" onclick="calculateLoan()">Calculate!</button>
+			</div>
+			
+			<br/><br/>
+			<div id="mainDiv">
+			  <br/>
+			  <table id="loanPaymentTable">
+				  <th>Payment Month:</th>
+				  <th>Payment:</th>
+				  <th>Principal Amount:</th>
+				  <th>Interest:</th>
+				  <th>New Balance:</th>
+				  <!-- Test Element
+					<tr id="monthColumn">Month 1<td>44555.11</td><td>44444.00</td><td>111.11</td><td>0</td></tr>
+				  -->
+				</table>
+			  <br/>
+			  <br/>
+			</div>
+			<br/>
+			<br/>
+		</div>
+	</main>
+	<footer>
+	
+	</footer>
+</body>
+</html>

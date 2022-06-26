@@ -8,28 +8,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/globalstyles.css">
-	<script defer>
-
-	function darkModeSwap() {
-		let bodyVar = document.body;
-		let buttonDarkTheme = document.getElementById("darkModeButtonToggle")
-		
-		const anchorLinkElement = document.getElementById('contactLinkName')
-		anchorLinkElement.classList.toggle("linkColorSwap")
-
-		const anchorLinkElement2 = document.getElementById('contactLinkName2')
-		anchorLinkElement2.classList.toggle("linkColorSwap")
-		
-
-
-		bodyVar.classList.toggle("darkModeSwap")
-		buttonDarkTheme.classList.toggle("darkLightModeButtonToggle")
-
-	}
-
-	let darkModeButton = document.getElementById("darkModeButtonToggle")
-	darkModeButton.addEventListener("click", darkModeSwap)
-
+	<script src="script/script.js" defer>
 	</script>
 	
 	<style>
@@ -101,12 +80,12 @@
 			grid-column: 1 / 7;
 		}
 		#thirdGridItem {
-			grid-row: 8 / 12;
+			grid-row: 8 / 11;
 			grid-column: 1 / 7;;
 		}
 		
 		#fourthGridItem {
-			grid-row: 12 / 12;
+			grid-row: 11 / 12;
 			grid-column: 1 / 7;
 		}
 		#secondGridItem img {
@@ -121,20 +100,20 @@
 			height: 1500px;
 		}
 		#firstGridItem {
-			grid-row: 2 / 6;
+			grid-row: 2 / 5;
 			grid-column: 1 / 7;
 		}
 		#secondGridItem {
-			grid-row: 6 / 9;
+			grid-row: 5 / 8;
 			grid-column: 1 / 7;
 		}
 		#thirdGridItem {
-			grid-row: 9 / 13;
+			grid-row: 8 / 12;
 			grid-column: 1 / 7;;
 		}
 		
 		#fourthGridItem {
-			grid-row: 13 / 18;
+			grid-row: 12 / 17;
 			grid-column: 1 / 7;
 		}
 		#secondGridItem img {
@@ -149,7 +128,7 @@
 <body>
 	<header>
 	    <nav>
-			<table>
+			<table id="navTable">
 				<td id="navBarFirstItem"><a class="navlinks" href="index.html">Home</a></td>
 				<td id="navBarSecondItem"><a class="navlinks" href="projects.html">Projects</a></td>
 				<td id="navBarThirdItem"><a class="navlinks" href="contact.html">Contact</a></td>
@@ -166,8 +145,8 @@
 				<h2>About Me:</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan felis sit amet nunc malesuada, semper commodo massa sollicitudin.
 					Maecenas eu leo felis. Quisque eu libero elit. Duis a arcu id libero commodo mollis sit amet ut tortor. 
-					Morbi nec auctor ligula. Quisque in condimentum velit. Ut ultrices orci mattis, tincidunt risus ac, cursus ante. 
-					Praesent id placerat purus, eget rutrum enim.
+					Morbi nec auctor ligula. Quisque in condimentum velit.
+					
 				</p>
 			</div>
 			<div id="secondGridItem">
@@ -180,7 +159,7 @@
 					Maecenas eu leo felis. Quisque eu libero elit. Duis a arcu id libero commodo mollis sit amet ut tortor. 
 					Morbi nec auctor ligula. Quisque in condimentum velit. Ut ultrices orci mattis, tincidunt risus ac, cursus ante. 
 					Praesent id placerat purus, eget rutrum enim. Phasellus lobortis justo eu sodales volutpat. Morbi pharetra gravida neque nec sagittis. 
-					Etiam nec justo velit. Nulla eget lectus et nisl feugiat iaculis. Fusce mattis in ex at fermentum. Phasellus non scelerisque.
+					Etiam nec justo velit. Nulla eget lectus et nisl feugiat iaculis. Fusce mattis in ex at.
 					
 				</p>
 			</div>

@@ -2,7 +2,7 @@
 
 
 body {
-    background-color: #3b3335; /* #131415 */
+    background-color: #222629; /* #131415 | #222629; */ 
     margin: 0px;
     padding: 0px;
     font-family: 'Roboto', sans-serif;
@@ -42,16 +42,17 @@ nav span {
     border: 2px solid #574747;
 }
 
-table {
-    border: 2px solid rgb(0, 0, 0);
+
+#navTable {
     display: flex;
     justify-content: center;
     border-spacing: 0px;
 }
 
-table td {
-    /*border: 2px solid gray;*/
-    border-bottom: 5px solid rgb(0, 0, 0); 
+
+
+ #navTable td {
+    /* border-bottom: 5px solid rgb(255, 255, 255); */
     height: 54px;
     width: 120px;
     text-align: center;
@@ -59,7 +60,7 @@ table td {
     font-weight: bold;
     margin: 0px;
     padding: 0px;
-}
+} 
 
 
 #gridWrapper {

@@ -16,7 +16,6 @@
             grid-column: 1 / 7;
         }
 
-
         #firstGridItem {
             grid-row: 2 / 4;
             grid-column: 1 / 7;
@@ -35,7 +34,6 @@
 			min-width: 320px;
         }
 
-
 		#thirdGridItem {
             grid-row: 4 / 10;
             grid-column: 4 / 7;
@@ -43,9 +41,17 @@
 			min-width: 320px;
 			display: flex;
         }
+
         #fourthGridItem {
             grid-row: 10 / 16;
-            grid-column: 1 / 7;
+            grid-column: 1 / 4;
+			border: 2px solid black;
+			min-width: 320px;
+        }
+
+		#fifthGridItem {
+            grid-row: 10 / 16;
+            grid-column: 4 / 7;
 			border: 2px solid black;
 			min-width: 320px;
         }
@@ -68,14 +74,14 @@
                 grid-column: 1 / 7;
             }
 			#thirdGridItem {
-            grid-row: 8 / 12;
-            grid-column: 1 / 7;
-			border: 2px solid black;
+				grid-row: 8 / 12;
+				grid-column: 1 / 7;
+				border: 2px solid black;
         	}
 			#fourthGridItem {
-            grid-row: 12 / 15;
-            grid-column: 1 / 7;
-			border: 2px solid black;
+				grid-row: 12 / 16;
+				grid-column: 1 / 8;
+				border: 2px solid black;
        		}
         }
     </style>
@@ -84,7 +90,7 @@
 <body>
 	<header>
 	    <nav>
-			<table>
+			<table id="navTable">
 				<td id="navBarFirstItem"><a class="navlinks" href="index.html">Home</a></td>
 				<td id="navBarSecondItem"><a class="navlinks" href="projects.html">Projects</a></td>
 				<td id="navBarThirdItem"><a class="navlinks" href="contact.html">Contact</a></td>
@@ -103,7 +109,7 @@
 			<div id="secondGridItem">
 				<div class="contentContainerProject">
 						<h4>Loan Payment Calculator</h4>
-						<a href="LoanDebtCalculator/index.html">
+						<a href="projects/loanDebtCalculator">
 								<img src="../images/LoanDebtCalculator.png" width="290px" height="190px">
 						</a> <!--width="290" height="190"-->
 						<p>A loan payment calculator in Javascript that calculates input from the user and returns payment amount per month.</p>
@@ -117,8 +123,19 @@
 				</div>
 			</div>
 			<div id="fourthGridItem">
-				
+				<div class="contentContainerProject">
+					<h4>Flexbox Exercise</h4>
+					<a href="LoanDebtCalculator/index.html"><img src="../images/LoanDebtCalculator.png" width="280px" height="190px"></a>
+					<p>An exercise in flexbox usage using design documentation.</p>
+				</div>
 			</div>
+			<!--<div id="fifthGridItem">
+				<div class="contentContainerProject">
+					<h4>A Future Project</h4>
+					<a href="LoanDebtCalculator/index.html"><img src="../images/LoanDebtCalculator.png" width="280px" height="190px"></a>
+					<p>Placeholder for a future project.</p>
+				</div>
+			</div>-->
 		</div>
 
 	</main>
